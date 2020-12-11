@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<div class="middle">
+    <form method="POST" action="{% url 'home' %}">
+        <center>
+
+            <button class="btn btn-success btn-lg" type="submit">Generate Your Password Now</button><br/>
+
+                    <br/>
+                    <label>Chose The Length Of Your Password</label>
+                    <select name="passlen" class="form-control form-control-sm small">
+                        <option value="8">8</option>
+                        <option value="10">10</option>
+                        <option value="12">12</option>
+                        <option value="14">14</option>
+                        <option value="16">16</option>
+                        <option value="18">18</option>
+                        <option value="20">20</option>
+                        <option value="22">22</option>
+
+                    </select>
+        </center>
+        <br />
+
+        <div class="container passView disp">
+            <div class="card text-black bg-light mb-3">
+                <div class="card-header"><b>Password Contains?</b></div>
+                <div class="card-body">
+                    <input class="form-check-input" name="uppercase" type="checkbox" value="a" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Uppercase Letter (A-Z)
+                    </label><br />
+
+                    <input class="form-check-input" type="checkbox" name="lowercase" value="b" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        lowercase Letter (a-z)
+                    </label><br />
+
+                    <input class="form-check-input" name="number" type="checkbox" value="c" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Numbers or Digits (1-9)
+                    </label><br />
+
+                    <input class="form-check-input" name="specialchar" type="checkbox" value="d" id="defaultCheck1">
+                    <label class="form-check-label" for="defaultCheck1">
+                        Special Chars (@#$%^)
+                    </label>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="container passView disp">
+            <div class="card text-black bg-light mb-3">
+                <div class="card-header"><b>Your Passsword is below</b></div>
+                <div class="card-body">
+                    <p class="card-text" style="font-size:20px; color: green;">{{pass}}</p>
+                </div>
+            </div>
+
+        </div>
+    </form>
+
+    {% endblock content %}

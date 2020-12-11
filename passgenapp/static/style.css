@@ -1,0 +1,23 @@
+.middle {
+    padding-top: 8%;
+    text-align: center;
+}
+
+.small {
+    width: 20%;
+    text-align: center;
+}
+
+.passView {
+    font-size: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+    text-align: middle;
+}
+
+.disp {
+    display: inline-block;
+    max-width: 22rem;
+    font-weight: normal;
+    font-size: 15px;
+}
